@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - Medical Portal</title>
+    <link rel="stylesheet" href="css/role-sign-up.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="logo">
+                <img src="logo.png" alt="Medical Logo">
+            </div>
+            <!-- Signup Form -->
+            <div class="form signup-form">
+                <h2>Create an Account</h2>
+                <form id="role-signup-form">
+                    <!-- Role Selection -->
+                    <label for="signup-role">Sign up as:</label>
+                    <select id="signup-role" required>
+                        <option value="" disabled selected>Select your role</option>
+                        <option value="patient">Patient</option>
+                        <option value="doctor">Doctor</option>
+                        <option value="admin">Admin</option>
+                    </select>
+
+                    <!-- Common Fields -->
+                    <input type="text" id="signup-name" placeholder="Full Name" required>
+                    <input type="email" id="signup-email" placeholder="Email Address" required>
+                    <input type="password" id="signup-password" placeholder="Password" required>
+                    <input type="tel" id="signup-phone" placeholder="Phone Number" required>
+                    <input type="date" id="signup-dob" placeholder="Date of Birth" required>
+
+                    <!-- Gender Selection -->
+                    <select id="signup-gender" required>
+                        <option value="" disabled selected>Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <!-- Patient-Specific Fields -->
+                    <div id="patient-fields" class="role-specific-fields" style="display:none;">
+                        <input type="text" id="signup-insurance" placeholder="Insurance Provider">
+                        <textarea id="signup-medical-history" rows="4" placeholder="Medical History (Optional)"></textarea>
+                    </div>
+
+                    <!-- Doctor-Specific Fields -->
+                    <div id="doctor-fields" class="role-specific-fields" style="display:none;">
+                        <input type="text" id="signup-license" placeholder="Medical License Number">
+                        <input type="text" id="signup-specialty" placeholder="Specialty">
+                        <input type="text" id="signup-hospital" placeholder="Affiliated Hospital/Clinic">
+                    </div>
+
+                    <!-- Admin-Specific Fields -->
+                    <div id="admin-fields" class="role-specific-fields" style="display:none;">
+                        <input type="text" id="signup-admin-code" placeholder="Admin Access Code" required>
+                    </div>
+
+                    <button type="submit">Sign Up</button>
+                    <p>Already have an account? <a href="login.html">Login here</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/role-sign-up.js"></script>
+</body>
+</html>
